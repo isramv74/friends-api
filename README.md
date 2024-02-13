@@ -8,13 +8,21 @@ Here is where the magic happens
 
 Docker
 <p>
+Dockerhub<br>
+docker pull isramv74/friends-api:v1.0<br>
+docker run -p 0.0.0.0:80:8080/tcp isramv74/friends-api:v1.0
+</p>
+<p>
 local image build:<br>
 docker buildx build --load -t friends-api:latest .<br>
 docker run -p 0.0.0.0:80:8080/tcp friends-api<br>
 </p>
 
 Testing in docker
+
+
 <p>
+Local enviroment<br>
 Published port in docker is: 80<br>
 http://localhost/<br>
 Here you will see the controllers available, in general must produce browser output
