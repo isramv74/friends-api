@@ -2,9 +2,9 @@
 Here is where the magic happens:<br>
 [DistanceController.groovy](grails-app%2Fcontrollers%2Ffriends%2Fapi%2FDistanceController.groovy)<br>
 [Relationship.groovy](grails-app%2Fdomain%2Ffriends%2Fapi%2FRelationship.groovy)
-<p>Create build: <br>
-./gradlew build
-</p>
+
+Here you can take a look at the current dataset:<br>
+[BootStrap.groovy](grails-app%2Finit%2Ffriends%2Fapi%2FBootStrap.groovy)
 
 Docker
 <p>
@@ -19,7 +19,6 @@ docker run -p 0.0.0.0:80:8080/tcp friends-api<br>
 </p>
 
 Testing in docker
-
 
 <p>
 Local enviroment<br>
@@ -47,5 +46,11 @@ curl -i -X POST -H "Content-Type: application/json" -d '{"name":"Raul"}' http://
 Create a Relationship<br>
 Change the persons ids<br>
 curl -i -X POST -H "Content-Type: application/json" -d '{"person1":{"id":4},"person2":{"id":3}}' http://localhost/relationship
+
+Distance 3<br>
+curl -i -X GET -H "Content-Type: application/json" http://localhost/distance/1/5
+
+Not friends<br>
+curl -i -X GET -H "Content-Type: application/json" http://localhost/distance/2/5
 
 </p>
