@@ -57,6 +57,7 @@ class DistanceController {
     /*
         getFriendIds: helper method to get all the ids of of a person into a list.
         TODO: move it to service layer
+        TODO: avoid duplicates
     */
     List<Long> getFriendIds(Long personId){
         List myFriends = new ArrayList();
@@ -64,6 +65,10 @@ class DistanceController {
 
         if (person){
             def relationships = Relationship.findAllByPerson1(person)
+            relationships.each { 
+                myFriends.add(it.person2.id)
+            }
+            relationships = Relationship.findAllByPerson2(person)
             relationships.each { 
                 myFriends.add(it.person2.id)
             }

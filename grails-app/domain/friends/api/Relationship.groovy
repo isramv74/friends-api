@@ -19,4 +19,12 @@ class Relationship {
         person2 nullable: false
     }
 
+// Ensure person1's ID is always lower than person2's ID to maintain consistency
+    def beforeValidate() {
+        if (person1.id > person2.id) {
+            Person temp = person1
+            person1 = person2
+            person2 = temp
+        }
+    }
 }
