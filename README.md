@@ -1,7 +1,7 @@
 ## Friends-api 1.0 Documentation
-Here is where the magic happens
-[DistanceController.groovy](grails-app%2Fcontrollers%2Ffriends%2Fapi%2FDistanceController.groovy)
-
+Here is where the magic happens:<br>
+[DistanceController.groovy](grails-app%2Fcontrollers%2Ffriends%2Fapi%2FDistanceController.groovy)<br>
+[Relationship.groovy](grails-app%2Fdomain%2Ffriends%2Fapi%2FRelationship.groovy)
 <p>Create build: <br>
 ./gradlew build
 </p>
