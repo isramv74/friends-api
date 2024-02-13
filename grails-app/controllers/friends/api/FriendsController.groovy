@@ -1,6 +1,11 @@
 package friends.api
 import grails.rest.*
 
+/*
+    FriendsController class
+    Controller to get friend for a given person.
+    Ex: curl -i -H "Accept: application/json" localhost:8080/friends/1
+*/
 class FriendsController extends RestfulController<Person>{
     static responseFormats = ['json', 'xml']
     FriendsController() {
