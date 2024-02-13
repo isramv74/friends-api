@@ -8,6 +8,8 @@ class UrlMappings {
             }
         }
 
+        "/friends"(resources:'friends')
+
         "/"(view:"/index")
         "500"(view:'/error')
         "404"(view:'/notFound')
