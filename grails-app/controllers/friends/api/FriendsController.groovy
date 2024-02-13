@@ -15,9 +15,6 @@ class FriendsController extends RestfulController<Person>{
 
 
     def show(Person person) {
-        log.error 'person.name: '+person.name
-        log.error 'show'
-
         List myFriends = new ArrayList();
         def relationships = Relationship.findAllByPerson1(person)
         relationships.each { 

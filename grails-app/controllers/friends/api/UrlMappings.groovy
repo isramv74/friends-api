@@ -9,6 +9,8 @@ class UrlMappings {
         }
 
         "/friends"(resources:'friends')
+        "/distance"(resources:'distance')
+        "/distance/$id?/$id2"(resource: 'distance', action: 'show')
 
         "/"(view:"/index")
         "500"(view:'/error')
